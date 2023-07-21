@@ -15,11 +15,6 @@
     }
   });
 
-  window.addEventListener("scroll", function () {
-    var header = document.querySelector(".header");
-    header.classList.toggle("sticky", window.scrollY > 0);
-  });
-
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function () {
     $(document).on("click", "a.page-scroll", function (event) {
