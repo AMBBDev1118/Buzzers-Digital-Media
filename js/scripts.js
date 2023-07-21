@@ -1,6 +1,5 @@
 // Libraries//
 
-gsap.registerPlugin(ScrollTrigger);
 /* Description: Custom JS file */
 
 (function ($) {
