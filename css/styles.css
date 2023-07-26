@@ -1144,12 +1144,22 @@ a:hover.back-to-top {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     z-index: 1;
     transform: translateY(100px);
   }
 
   .card:hover .face.face1 {
     background: #24262a;
+    transform: translateY(0);
+  }
+  .card:hover .face.face1 h4 {
+    color: #ffffff;
+    transform: translateY(0);
+  }
+  .card:hover .face.face1 i {
+    color: #ffffff;
+    width: 100%;
     transform: translateY(0);
   }
 
