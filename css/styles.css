@@ -750,6 +750,8 @@ ul li a:hover::after {
 }
 
 .basic-3 .image-container img {
+  width: 75%;
+  height: auto;
   margin: 0;
   transition: all 0.2s;
 }
