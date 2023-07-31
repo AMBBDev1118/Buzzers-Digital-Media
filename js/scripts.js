@@ -4,10 +4,21 @@
 
 // Locomotive Scroll
 
-const scroller = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
+// const scroller = new LocomotiveScroll({
+//   el: document.querySelector("[data-scroll-container]"),
+//   smooth: true,
+// });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
 });
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
 
 (function ($) {
   "use strict";
@@ -21,6 +32,38 @@ const scroller = new LocomotiveScroll({
       $(".fixed-top").removeClass("top-nav-collapse");
     }
   });
+
+  function initHamburgerNav() {
+    // Open/close navigation when clicked .btn-hamburger
+
+    $(document).ready(function () {
+      $(".btn-hamburger, .btn-menu").click(function () {
+        if ($(".btn-hamburger, .btn-menu").hasClass("active")) {
+          $(".btn-hamburger, .btn-menu").removeClass("active");
+          $("main").removeClass("nav-active");
+          scroll.start();
+        } else {
+          $(".btn-hamburger, .btn-menu").addClass("active");
+          $("main").addClass("nav-active");
+          scroll.stop();
+        }
+      });
+      $(".fixed-nav-back").click(function () {
+        $(".btn-hamburger, .btn-menu").removeClass("active");
+        $("main").removeClass("nav-active");
+        scroll.start();
+      });
+    });
+    $(document).keydown(function (e) {
+      if (e.keyCode == 27) {
+        if ($("main").hasClass("nav-active")) {
+          $(".btn-hamburger, .btn-menu").removeClass("active");
+          $("main").removeClass("nav-active");
+          scroll.start();
+        }
+      }
+    });
+  }
 
   // jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function () {

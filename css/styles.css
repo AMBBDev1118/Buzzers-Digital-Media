@@ -693,7 +693,7 @@ ul li a:hover::after {
       rgba(25, 26, 29, 0.5),
       rgba(25, 26, 29, 0.5)
     ),
-    url("../images/details-background.jpg") center center no-repeat;
+    url("../images/MCTI-2.jpeg") center center no-repeat;
   background-size: cover;
 }
 
@@ -1483,7 +1483,7 @@ a:hover.back-to-top {
 /* end of min-width 1200px */
 
 /* Locomotive Syles */
-.pin-container {
+/* .pin-container {
   padding-bottom: 8rem;
 }
 
@@ -1495,4 +1495,27 @@ a:hover.back-to-top {
 
 .appear {
   opacity: 1;
+} */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.proj:nth-child(2) {
+  transition-delay: 200ms;
+}
+.proj:nth-child(3) {
+  transition-delay: 300ms;
+}
+.proj:nth-child(4) {
+  transition-delay: 400ms;
 }
