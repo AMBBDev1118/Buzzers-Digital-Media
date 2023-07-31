@@ -778,7 +778,6 @@ ul li a:hover::after {
 
 /* Hover Animation */
 .basic-4 .image-container {
-  overflow: hidden;
   margin-right: auto;
   margin-left: auto;
 }
@@ -791,7 +790,7 @@ ul li a:hover::after {
 .basic-4 .image-container:hover img {
   -moz-transform: scale(1.15);
   -webkit-transform: scale(1.15);
-  transform: scale(1.15);
+  transform: translateY(-10px);
 }
 /* end of hover animation */
 
@@ -1480,3 +1479,18 @@ a:hover.back-to-top {
   /* end of extra pages */
 }
 /* end of min-width 1200px */
+
+/* Locomotive Syles */
+.pin-container {
+  padding-bottom: 8rem;
+}
+
+.fade-text {
+  color: #24262a;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.appear {
+  opacity: 1;
+}
