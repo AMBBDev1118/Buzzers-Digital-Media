@@ -601,10 +601,7 @@ ul li a:hover::after {
 .pict {
   width: 450em;
   height: 35em;
-  border-bottom-right-radius: 8%;
-  border-bottom-left-radius: 8%;
-  border-top-left-radius: 4%;
-  border-top-right-radius: 4%;
+  border-radius: 8%;
 }
 
 .header-text {
@@ -648,19 +645,23 @@ ul li a:hover::after {
 
 .pic-ctn {
   position: relative;
+
   width: 75vw;
   height: 300px;
   margin-top: -20vh;
   margin-bottom: 8vh;
+  margin-right: 10rem;
+  margin-left: -2.5rem;
 }
 
 .pic-ctn > img {
+  padding-right: 1rem;
   position: absolute;
   top: 0;
   left: calc(-12.5% - 100px);
   opacity: 0;
   animation: display 10s infinite;
-  width: 20%;
+  width: 30%;
 }
 
 img:nth-child(2) {
@@ -821,11 +822,11 @@ img:nth-child(5) {
   height: 430px;
   background: linear-gradient(
       to bottom right,
-      rgba(25, 26, 29, 0.5),
-      rgba(25, 26, 29, 0.5)
+      rgba(25, 26, 29, 0.05),
+      rgba(25, 26, 29, 0.05)
     ),
     url("../images/MCTI-2.jpeg") center center no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 
 .split .area-2 {
